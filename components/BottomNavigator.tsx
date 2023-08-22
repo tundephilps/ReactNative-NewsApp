@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 20,
     elevation: 1,
-    gap: 60,
+    gap: 40,
   },
   statsItem: {
     display: "flex",
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 6,
-    width: 40,
+    width: 60,
     backgroundColor: "gray",
     position: "absolute",
     top: -17,
