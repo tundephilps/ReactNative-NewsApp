@@ -56,114 +56,112 @@ export default function NewsDetails() {
   });
 
   return (
-    <SafeAreaView>
-      <View style={{ backgroundColor: "white", flex: 1 }}>
-        <Animated.View
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <Animated.View
+        style={{
+          transform: [
+            {
+              scaleX: animatedBackgroundScale,
+            },
+            {
+              scaleY: animatedBackgroundScale,
+            },
+          ],
+        }}
+      >
+        <TouchableOpacity
           style={{
-            transform: [
-              {
-                scaleX: animatedBackgroundScale,
-              },
-              {
-                scaleY: animatedBackgroundScale,
-              },
-            ],
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 35,
+            width: 35,
+            borderRadius: 18,
+            borderWidth: 1,
+            borderColor: "green",
+            zIndex: 20,
+            marginLeft: 50,
+            marginTop: 50,
           }}
-        >
-          <TouchableOpacity
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: 35,
-              width: 35,
-              borderRadius: 18,
-              borderWidth: 1,
-              borderColor: "green",
-              zIndex: 20,
-              marginLeft: 50,
-              marginTop: 50,
-            }}
-            onPress={() => navigation.goBack()}
-          >
-            <BlurView
-              style={{
-                borderRadius: 20,
-                width: 35,
-                height: 35,
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              tint="light"
-              intensity={500}
-            >
-              <Ionicons name="chevron-back" size={24} color="green" />
-            </BlurView>
-          </TouchableOpacity>
-          <Image
-            style={styles.backdrop}
-            resizeMode="cover"
-            source={{ uri: article.urlToImage }}
-          />
-        </Animated.View>
-        <ScrollView
-          style={styles.container}
-          onScroll={Animated.event(
-            [
-              {
-                nativeEvent: {
-                  contentOffset: {
-                    y: scrollY,
-                  },
-                },
-              },
-            ],
-            { useNativeDriver: false }
-          )}
-          scrollEventThrottle={1}
+          onPress={() => navigation.goBack()}
         >
           <BlurView
             style={{
-              borderRadius: 10,
-              height: 150,
-              width: "70%",
-              margin: "auto",
-              position: "absolute",
-              top: 220,
-              left: 55,
-              zIndex: 10,
-              paddingHorizontal: 20,
-              paddingVertical: 20,
+              borderRadius: 20,
+              width: 35,
+              height: 35,
+              alignItems: "center",
+              justifyContent: "center",
             }}
             tint="light"
-            intensity={200}
+            intensity={500}
           >
-            <View>
-              <Text style={{ fontSize: 9 }}>{article.publishedAt}</Text>
-              <Text style={{ paddingBottom: 8, paddingTop: 8 }}>
-                {article.title}
-              </Text>
-              <Text style={{ fontSize: 9 }}>Published by {article.author}</Text>
-            </View>
+            <Ionicons name="chevron-back" size={24} color="green" />
           </BlurView>
-          <View style={styles.content}>
-            <ScrollView>
-              <Text style={styles.text}>{article.content}</Text>
-            </ScrollView>
-            <View style={styles.stats}>
-              <View style={styles.statsItem}>
-                <Feather name="clock" color="#185aca" size={16} />
-                <Text style={styles.statsItemText}>3 hours 32 minutes</Text>
-              </View>
-              <View style={styles.statsItem}>
-                <Feather name="grid" color="#185aca" size={16} />
-                <Text style={styles.statsItemText}>{article.source.name}</Text>
-              </View>
+        </TouchableOpacity>
+        <Image
+          style={styles.backdrop}
+          resizeMode="cover"
+          source={{ uri: article.urlToImage }}
+        />
+      </Animated.View>
+      <ScrollView
+        style={styles.container}
+        onScroll={Animated.event(
+          [
+            {
+              nativeEvent: {
+                contentOffset: {
+                  y: scrollY,
+                },
+              },
+            },
+          ],
+          { useNativeDriver: false }
+        )}
+        scrollEventThrottle={1}
+      >
+        <BlurView
+          style={{
+            borderRadius: 10,
+            height: 150,
+            width: "70%",
+            margin: "auto",
+            position: "absolute",
+            top: 220,
+            left: 55,
+            zIndex: 10,
+            paddingHorizontal: 20,
+            paddingVertical: 20,
+          }}
+          tint="light"
+          intensity={200}
+        >
+          <View>
+            <Text style={{ fontSize: 9 }}>{article.publishedAt}</Text>
+            <Text style={{ paddingBottom: 8, paddingTop: 8 }}>
+              {article.title}
+            </Text>
+            <Text style={{ fontSize: 9 }}>Published by {article.author}</Text>
+          </View>
+        </BlurView>
+        <View style={styles.content}>
+          <ScrollView>
+            <Text style={styles.text}>{article.content}</Text>
+          </ScrollView>
+          <View style={styles.stats}>
+            <View style={styles.statsItem}>
+              <Feather name="clock" color="#185aca" size={16} />
+              <Text style={styles.statsItemText}>3 hours 32 minutes</Text>
+            </View>
+            <View style={styles.statsItem}>
+              <Feather name="grid" color="#185aca" size={16} />
+              <Text style={styles.statsItemText}>{article.source.name}</Text>
             </View>
           </View>
-        </ScrollView>
-      </View>
-    </SafeAreaView>
+        </View>
+      </ScrollView>
+    </View>
   );
 }
 

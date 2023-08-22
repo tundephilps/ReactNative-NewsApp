@@ -82,7 +82,7 @@ const Tabs2 = () => {
               justifyContent: "space-between",
             }}
           >
-            <Text style={{ fontWeight: 500, fontSize: 30 }}>Filter</Text>
+            <Text style={{ fontWeight: "500", fontSize: 30 }}>Filter</Text>
             <View>
               <View style={styles.btnXS}>
                 <Feather
@@ -115,7 +115,7 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Recommended</Text>
               </View>
-            </TouchableOpacity>{" "}
+            </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 // handle onPress
@@ -124,7 +124,7 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Latest</Text>
               </View>
-            </TouchableOpacity>{" "}
+            </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 // handle onPress
@@ -133,7 +133,7 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Most Viewed</Text>
               </View>
-            </TouchableOpacity>{" "}
+            </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 // handle onPress
@@ -142,7 +142,7 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Channel</Text>
               </View>
-            </TouchableOpacity>{" "}
+            </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 // handle onPress
