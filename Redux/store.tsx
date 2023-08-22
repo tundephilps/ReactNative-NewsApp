@@ -13,6 +13,7 @@ interface RootState {
 const store = configureStore({
   reducer: {
     news: newsReducer,
+    // ... other reducers if applicable
   },
 });
 

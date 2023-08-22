@@ -71,7 +71,7 @@ const newsSlice = createSlice({
       })
       .addCase(fetchTopHeadlines.rejected, (state, action) => {
         state.topHeadlines.status = "failed";
-        //  state.topHeadlines.error = action.error.message;
+        // state.topHeadlines.error = action.error.message;
       })
       .addCase(fetchEverything.pending, (state) => {
         state.everything.status = "loading";
@@ -89,13 +89,13 @@ const newsSlice = createSlice({
 
 export default newsSlice.reducer;
 
-export const selectTopHeadlinesData = (state: RootState) =>
-  state.news.topHeadlines.data;
-export const selectEverythingData = (state: RootState) =>
-  state.news.everything.data;
-
 // Define the RootState type
 interface RootState {
   news: NewsState;
   // ... other slices' states if applicable
 }
+
+export const selectTopHeadlinesData = (state: RootState) =>
+  state.news.topHeadlines.data;
+export const selectEverythingData = (state: RootState) =>
+  state.news.everything.data;
