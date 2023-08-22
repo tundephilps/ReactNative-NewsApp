@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-const BottomSheet: React.FC = () => {
+const BottomDrawer: React.FC = () => {
   return (
     <View
       style={{
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BottomSheet;
+export default BottomDrawer;
