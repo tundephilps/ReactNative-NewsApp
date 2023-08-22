@@ -23,6 +23,7 @@ const App = () => {
               headerStyle: {
                 backgroundColor: "white",
               },
+
               headerTintColor: "red", // Customize header text color
               headerTitleAlign: "center", // Center-align header title
             }}

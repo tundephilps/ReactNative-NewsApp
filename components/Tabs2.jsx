@@ -6,7 +6,7 @@ import {
   Text,
   SafeAreaView,
   FlatList,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import BottomSheet from "react-native-raw-bottom-sheet";
 import { Feather } from "@expo/vector-icons";
@@ -107,7 +107,7 @@ const Tabs2 = () => {
               gap: 6,
             }}
           >
-            <TouchableOpacity
+            <Pressable
               onPress={() => {
                 // handle onPress
               }}
@@ -115,8 +115,8 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Recommended</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </Pressable>
+            <Pressable
               onPress={() => {
                 // handle onPress
               }}
@@ -124,8 +124,8 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Latest</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </Pressable>
+            <Pressable
               onPress={() => {
                 // handle onPress
               }}
@@ -133,8 +133,8 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Most Viewed</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </Pressable>
+            <Pressable
               onPress={() => {
                 // handle onPress
               }}
@@ -142,8 +142,8 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Channel</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </Pressable>
+            <Pressable
               onPress={() => {
                 // handle onPress
               }}
@@ -151,11 +151,11 @@ const Tabs2 = () => {
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Following</Text>
               </View>
-            </TouchableOpacity>
+            </Pressable>
           </View>
         </View>
         <View style={{ marginBottom: 30, margin: "auto" }}>
-          <TouchableOpacity
+          <Pressable
             onPress={() => {
               // handle onPress
             }}
@@ -163,7 +163,7 @@ const Tabs2 = () => {
             <View style={styles.btnXL}>
               <Text style={styles.btnXLText}>Save</Text>
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </BottomSheet>
     </View>
@@ -198,7 +198,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
 
     borderWidth: 1,
-    backgroundColor: "#fff",
     borderColor: "#d1d5db",
   },
   btnXSText: {
@@ -220,6 +219,9 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     borderRadius: 30,
     marginHorizontal: 8,
+
+    borderWidth: 1,
+    borderColor: "#d1d5db",
   },
   icon: {
     marginRight: 5,

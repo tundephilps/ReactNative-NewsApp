@@ -5,7 +5,7 @@ import {
   FlatList,
   Image,
   StyleSheet,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
@@ -28,7 +28,7 @@ const LatestNews = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity
+    <Pressable
       style={styles.touch}
       onPress={() => navigation.navigate("NewsDetails", { article: item })}
       //  onPress={() => navigation.navigate("NewsDetails")}
@@ -40,7 +40,7 @@ const LatestNews = () => {
         <Text style={styles.textbold}>{item.title}</Text>
         <Text style={styles.textsmall}>{item.description}</Text>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 
   return (

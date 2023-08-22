@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, Pressable, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
@@ -13,7 +13,7 @@ const Explore = () => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        paddingHorizontal: 4,
+        paddingHorizontal: 8,
         paddingBottom: 8,
       }}
     >
@@ -28,7 +28,7 @@ const Explore = () => {
       >
         Latest News
       </Text>
-      <TouchableOpacity
+      <Pressable
         style={{
           display: "flex",
           flexDirection: "row",
@@ -40,7 +40,7 @@ const Explore = () => {
       >
         <Text style={{ color: "blue" }}>See all</Text>
         <FontAwesome name="long-arrow-right" size={24} color="blue" />
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

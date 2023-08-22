@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   View,
-  TouchableWithoutFeedback,
+  Pressable,
   Text,
   SafeAreaView,
   FlatList,
@@ -27,7 +27,7 @@ const Tabs = () => {
   const renderItem = ({ item, index }) => {
     const isActive = index === value;
     return (
-      <TouchableWithoutFeedback
+      <Pressable
         onPress={() => {
           setValue(index);
         }}
@@ -46,7 +46,7 @@ const Tabs = () => {
             {item.name}
           </Text>
         </View>
-      </TouchableWithoutFeedback>
+      </Pressable>
     );
   };
 
@@ -79,6 +79,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     borderRadius: 30,
     marginHorizontal: 8,
+    borderWidth: 1,
+    borderColor: "#d1d5db",
   },
   icon: {
     marginRight: 5,

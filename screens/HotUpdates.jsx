@@ -3,7 +3,7 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity,
+  Pressable,
   SafeAreaView,
   Image,
   FlatList,
@@ -24,16 +24,16 @@ const HotUpdates = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity
+    <Pressable
       onPress={() => navigation.navigate("NewsDetails", { article: item })}
     >
       <View style={styles.card}>
         <View style={styles.cardTop}>
           <Image
             alt=""
-            resizeMode="cover"
             style={styles.cardImg}
             source={{ uri: item.urlToImage }}
+            resizeMode="cover"
           />
         </View>
 
@@ -52,7 +52,7 @@ const HotUpdates = () => {
           </Text>
         </View>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 
   return (

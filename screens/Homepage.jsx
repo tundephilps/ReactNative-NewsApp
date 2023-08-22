@@ -4,7 +4,7 @@ import {
   SafeAreaView,
   View,
   TextInput,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import Explore from "../components/Explore";
@@ -26,28 +26,26 @@ const Homepage = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.top}>
         <View style={styles.header}>
-          <View
-          //style={styles.search}
-          >
+          <View style={{ width: "70%" }}>
             <TextInput
               placeholder="Search"
               placeholderTextColor="#9695b0"
               style={styles.searchInput}
             />
             <View style={styles.searchFloating}>
-              <TouchableOpacity>
+              <Pressable>
                 <View>
-                  <Feather name="search" size={20} color="white" />
+                  <Feather name="search" size={20} color="gray" />
                 </View>
-              </TouchableOpacity>
+              </Pressable>
             </View>
           </View>
 
-          <TouchableOpacity onPress={() => navigation.navigate("HotUpdates")}>
+          <Pressable onPress={() => navigation.navigate("HotUpdates")}>
             <View style={styles.searchButton}>
               <Feather color="white" name="bell" size={24} />
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
       {/*Explore*/}
@@ -68,28 +66,13 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffff",
     flex: 1,
+    //paddingHorizontal: 8,
   },
   top: {
-    paddingHorizontal: 24,
+    paddingHorizontal: 8,
     paddingVertical: 8,
   },
-  greeting: {
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.15)",
-    marginBottom: 12,
-  },
-  greetingTitle: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#1a2525",
-  },
-  greetingText: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#1a2525",
-    marginTop: 8,
-  },
+
   searchInput: {
     height: 56,
     backgroundColor: "#f3f3f6",
@@ -97,7 +80,7 @@ const styles = StyleSheet.create({
     color: "#1a2525",
     fontSize: 18,
     borderRadius: 9999,
-    width: 300,
+    maxWidth: 400,
   },
   searchFloating: {
     position: "absolute",

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, Text, TextInput, Pressable } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 const Search = () => {
@@ -20,21 +14,21 @@ const Search = () => {
           style={styles.searchInput}
         />
         <View style={styles.searchFloating}>
-          <TouchableOpacity>
+          <Pressable>
             <View style={styles.searchButton}>
               <Feather name="search" size={20} color="white" />
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
 
-      <TouchableOpacity
+      <Pressable
         onPress={() => {
           // handle onPress
         }}
       >
         <Feather color="#1a2525" name="bell" size={24} />
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

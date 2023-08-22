@@ -4,7 +4,7 @@ import {
   SafeAreaView,
   View,
   TextInput,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import Results from "../components/Results";
@@ -34,23 +34,19 @@ const Filter = () => {
               style={styles.searchInput}
             />
             <View style={styles.searchFloating}>
-              <TouchableOpacity>
+              <Pressable>
                 <View>
                   <Feather name="search" size={20} color="white" />
                 </View>
-              </TouchableOpacity>
+              </Pressable>
             </View>
           </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              // handle onPress
-            }}
-          >
+          <Pressable>
             <View style={styles.searchButton}>
               <Feather color="white" name="bell" size={24} />
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
 
@@ -153,11 +149,6 @@ const styles = StyleSheet.create({
   headerImg: {
     width: 40,
     height: 40,
-    borderRadius: 9999,
-  },
-  avatar: {
-    width: 48,
-    height: 48,
     borderRadius: 9999,
   },
 });

@@ -5,7 +5,7 @@ import {
   FlatList,
   Image,
   StyleSheet,
-  TouchableOpacity,
+  Pressable,
   ScrollView,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,7 +30,7 @@ const RandomNews = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity
+    <Pressable
       style={styles.touch}
       onPress={() => navigation.navigate("NewsDetails", { article: item })}
     >
@@ -41,7 +41,7 @@ const RandomNews = () => {
         <Text style={styles.textbold}>{item.title}</Text>
         <Text style={styles.date}>{item.publishedAt}</Text>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 
   return (
@@ -61,17 +61,17 @@ export default RandomNews;
 const styles = StyleSheet.create({
   touch: {
     height: 200,
-
+    //  maxWidth: "100%",
     marginTop: 10,
     position: "relative",
-    paddingHorizontal: 10,
+    paddingHorizontal: 8,
   },
   item: {
     alignItems: "center",
     position: "relative",
   },
   image: {
-    width: 370,
+    width: "100%",
     height: 200,
     borderRadius: 10,
   },

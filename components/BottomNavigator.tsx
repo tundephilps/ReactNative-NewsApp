@@ -1,24 +1,26 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Animated } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
 const BottomNavigator = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.stats}>
-        <View style={styles.statsItem}>
-          <Ionicons name="home-outline" size={24} color="#ff3a44" />
-          <Text style={styles.statsItemValue}>Home</Text>
-        </View>
-        <View style={styles.statsItem}>
-          <View style={styles.separator}></View>
-          <Ionicons name="heart-outline" size={24} color="gray" />
-          <Text style={styles.statsItemValue}>Favourite </Text>
-        </View>
-        <View style={styles.statsItem}>
-          <FontAwesome name="smile-o" size={24} color="gray" />
-          <Text style={styles.statsItemValue}>Profile</Text>
+      <View style={{ width: "80%" }}>
+        <View style={styles.stats}>
+          <View style={styles.statsItem}>
+            <Ionicons name="home-outline" size={24} color="#ff3a44" />
+            <Text style={styles.statsItemValue}>Home</Text>
+          </View>
+          <View style={styles.statsItem}>
+            <View style={styles.separator}></View>
+            <Ionicons name="heart-outline" size={24} color="gray" />
+            <Text style={styles.statsItemValue}>Favourite </Text>
+          </View>
+          <View style={styles.statsItem}>
+            <FontAwesome name="smile-o" size={24} color="gray" />
+            <Text style={styles.statsItemValue}>Profile</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -30,11 +32,13 @@ export default BottomNavigator;
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
+    width: "100%",
     bottom: 40,
-    paddingHorizontal: 20,
     zIndex: 10,
+    left: "10%",
   },
   stats: {
+    width: "100%",
     backgroundColor: "#fff",
     flexDirection: "row",
     padding: 20,
