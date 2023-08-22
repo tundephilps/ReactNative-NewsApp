@@ -97,7 +97,9 @@ const Tabs2 = () => {
             </View>
           </View>
           <View>
-            <Text style={{ color: "black", marginTop: 20 }}>Sort By</Text>
+            <Text style={{ color: "black", marginTop: 12, paddingBottom: 12 }}>
+              Sort By
+            </Text>
           </View>
           <View
             style={{
@@ -179,8 +181,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 50,
     paddingVertical: 12,
-    width: 350,
-    borderWidth: 1,
+    width: 370,
     backgroundColor: "#ff3a44",
   },
   btnXLText: {
@@ -208,7 +209,7 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: "white",
-    paddingVertical: 24,
+    // paddingVertical: 24,
   },
   item: {
     flexDirection: "row",
@@ -217,7 +218,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     backgroundColor: "transparent",
-    borderRadius: 30,
+    borderRadius: 50,
     marginHorizontal: 8,
 
     borderWidth: 1,
@@ -232,6 +233,6 @@ const styles = StyleSheet.create({
     color: "#6b7280",
   },
   bottomSheetContent: {
-    padding: 10,
+    paddingHorizontal: 10,
   },
 });

@@ -36,17 +36,11 @@ const Filter = () => {
             <View style={styles.searchFloating}>
               <Pressable>
                 <View>
-                  <Feather name="search" size={20} color="white" />
+                  <Feather name="search" size={20} color="gray" />
                 </View>
               </Pressable>
             </View>
           </View>
-
-          <Pressable>
-            <View style={styles.searchButton}>
-              <Feather color="white" name="bell" size={24} />
-            </View>
-          </Pressable>
         </View>
       </View>
 
@@ -66,34 +60,25 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   top: {
-    paddingHorizontal: 24,
     paddingVertical: 8,
+    width: "100%",
+    paddingHorizontal: 20,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingBottom: 17,
   },
-  greeting: {
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.15)",
-    marginBottom: 12,
-  },
-  greetingTitle: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#1a2525",
-  },
-  greetingText: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#1a2525",
-    marginTop: 8,
-  },
+
   searchInput: {
     height: 56,
-    backgroundColor: "#f3f3f6",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 16,
     color: "#1a2525",
     fontSize: 18,
     borderRadius: 9999,
-    width: 300,
+    borderColor: "gray",
+    borderWidth: 2,
+    width: 360,
   },
   searchFloating: {
     position: "absolute",
@@ -109,7 +94,7 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 9999,
-    backgroundColor: "#ff3a44",
+    backgroundColor: "gray",
     justifyContent: "center",
     alignItems: "center",
   },

@@ -15,6 +15,7 @@ const Explore = () => {
         justifyContent: "space-between",
         paddingHorizontal: 8,
         paddingBottom: 8,
+        paddingTop: 12,
       }}
     >
       <Text
