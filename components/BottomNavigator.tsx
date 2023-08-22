@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Animated } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#fff",
     flexDirection: "row",
-    padding: 20,
+    padding: 15,
     paddingHorizontal: 40,
     borderRadius: 50,
     shadowColor: "#90a0ca",
@@ -55,24 +55,24 @@ const styles = StyleSheet.create({
     gap: 60,
   },
   statsItem: {
+    display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: 0,
-    borderLeftWidth: 1,
     borderColor: "rgba(189, 189, 189, 0.32)",
   },
   statsItemValue: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: "600",
     lineHeight: 20,
     color: "gray",
   },
   separator: {
     height: 6,
-    width: 70,
+    width: 40,
     backgroundColor: "gray",
     position: "absolute",
     top: -17,

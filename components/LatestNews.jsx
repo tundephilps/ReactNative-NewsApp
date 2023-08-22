@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
-//import { fetchTopHeadlines, selectTopHeadlinesData } from "../Redux/newSlice"; // Correct paths
 
 import { fetchTopHeadlines, selectTopHeadlinesData } from "../Redux/newSlice"; // Correct paths
 

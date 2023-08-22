@@ -3,11 +3,10 @@ import {
   StyleSheet,
   View,
   Image,
-  ScrollView,
   Text,
   Animated,
   Pressable,
-  SafeAreaView,
+  ScrollView,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 

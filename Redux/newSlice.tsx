@@ -7,28 +7,22 @@ const apiKey = "df8748021fa744db86eaa3e659f732a3"; // Replace with your API key
 interface Article {
   title: string;
   description: string;
-  // ... other properties
 }
 
 export const fetchTopHeadlines = createAsyncThunk(
   "news/fetchTopHeadlines",
-  async () => {
-    const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
-    );
-    return response.data.articles as Article[];
+  () => {
+    return axios
+      .get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
+      .then((response) => response.data.articles as Article[]);
   }
 );
 
-export const fetchEverything = createAsyncThunk(
-  "news/fetchEverything",
-  async () => {
-    const response = await axios.get(
-      `https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`
-    );
-    return response.data.articles as Article[];
-  }
-);
+export const fetchEverything = createAsyncThunk("news/fetchEverything", () => {
+  return axios
+    .get(`https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`)
+    .then((response) => response.data.articles as Article[]);
+});
 
 interface NewsState {
   topHeadlines: {
