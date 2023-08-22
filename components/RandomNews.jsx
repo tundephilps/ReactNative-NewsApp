@@ -6,13 +6,10 @@ import {
   Image,
   StyleSheet,
   Pressable,
-  ScrollView,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { fetchEverything, selectEverythingData } from "../Redux/newSlice"; // Correct paths
-
-//import { useRoute } from "@react-navigation/native"; // Import useRoute
 
 const RandomNews = () => {
   const dispatch = useDispatch();
@@ -49,7 +46,6 @@ const RandomNews = () => {
       data={everythingData}
       renderItem={renderItem}
       keyExtractor={(item, index) => `${item.publishedAt}-${index}`}
-      //  keyExtractor={(item) => item.id}
       vertical
       showsVerticalScrollIndicator={false}
     />
@@ -61,7 +57,6 @@ export default RandomNews;
 const styles = StyleSheet.create({
   touch: {
     height: 200,
-    //  maxWidth: "100%",
     marginTop: 10,
     position: "relative",
     paddingHorizontal: 8,

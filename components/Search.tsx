@@ -5,9 +5,7 @@ import { Feather } from "@expo/vector-icons";
 const Search = () => {
   return (
     <View style={styles.searchbox}>
-      <View
-      //style={styles.search}
-      >
+      <View>
         <TextInput
           placeholder="Search"
           placeholderTextColor="#9695b0"
@@ -22,11 +20,7 @@ const Search = () => {
         </View>
       </View>
 
-      <Pressable
-        onPress={() => {
-          // handle onPress
-        }}
-      >
+      <Pressable>
         <Feather color="#1a2525" name="bell" size={24} />
       </Pressable>
     </View>

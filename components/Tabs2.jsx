@@ -109,47 +109,27 @@ const Tabs2 = () => {
               gap: 6,
             }}
           >
-            <Pressable
-              onPress={() => {
-                // handle onPress
-              }}
-            >
+            <Pressable>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Recommended</Text>
               </View>
             </Pressable>
-            <Pressable
-              onPress={() => {
-                // handle onPress
-              }}
-            >
+            <Pressable>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Latest</Text>
               </View>
             </Pressable>
-            <Pressable
-              onPress={() => {
-                // handle onPress
-              }}
-            >
+            <Pressable>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Most Viewed</Text>
               </View>
             </Pressable>
-            <Pressable
-              onPress={() => {
-                // handle onPress
-              }}
-            >
+            <Pressable>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Channel</Text>
               </View>
             </Pressable>
-            <Pressable
-              onPress={() => {
-                // handle onPress
-              }}
-            >
+            <Pressable>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Following</Text>
               </View>
@@ -157,11 +137,7 @@ const Tabs2 = () => {
           </View>
         </View>
         <View style={{ marginBottom: 30, margin: "auto" }}>
-          <Pressable
-            onPress={() => {
-              // handle onPress
-            }}
-          >
+          <Pressable>
             <View style={styles.btnXL}>
               <Text style={styles.btnXLText}>Save</Text>
             </View>
