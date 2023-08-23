@@ -32,7 +32,10 @@ const Tabs = () => {
           setValue(index);
         }}
       >
-        <View style={[styles.item, isActive && { backgroundColor: "#ff3a44" }]}>
+        <View
+          style={[styles.item, isActive && { backgroundColor: "#ff3a44" }]}
+          onPress={() => navigation.navigate("Filter")}
+        >
           {item.icon && (
             <Feather
               name={item.icon}
