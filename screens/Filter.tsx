@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import Results from "../components/Results";
-import Tabs2 from "../components/Tabs2";
+import BottomSheetTabs from "../components/BottomSheetTabs";
 import { useNavigation } from "@react-navigation/native";
 import RandomNews from "../components/RandomNews";
 
@@ -44,7 +44,7 @@ const Filter = () => {
         </View>
       </View>
 
-      <Tabs2 />
+      <BottomSheetTabs />
 
       <Results />
       <RandomNews />

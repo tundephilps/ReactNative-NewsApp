@@ -56,18 +56,19 @@ export default RandomNews;
 
 const styles = StyleSheet.create({
   touch: {
-    height: 200,
-    marginTop: 10,
+    height: 150,
+    marginTop: 6,
     position: "relative",
     paddingHorizontal: 8,
   },
   item: {
     alignItems: "center",
     position: "relative",
+    gap: 8,
   },
   image: {
     width: "100%",
-    height: 200,
+    height: 150,
     borderRadius: 10,
   },
   author: {

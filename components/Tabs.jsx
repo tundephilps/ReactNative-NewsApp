@@ -71,7 +71,7 @@ export default Tabs;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    paddingVertical: 24,
+    paddingTop: 18,
   },
   item: {
     flexDirection: "row", // Align icon and text horizontally

@@ -19,7 +19,7 @@ const tabs = [
   { name: "Sports" },
 ];
 
-const Tabs2 = () => {
+const BottomSheetTabs = () => {
   const [value, setValue] = useState(0);
   const bottomSheetRef = useRef(null);
 
@@ -147,7 +147,7 @@ const Tabs2 = () => {
   );
 };
 
-export default Tabs2;
+export default BottomSheetTabs;
 
 const styles = StyleSheet.create({
   btnXL: {
@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     width: 370,
     backgroundColor: "#ff3a44",
+    margin: "auto",
   },
   btnXLText: {
     fontSize: 20,
