@@ -1,11 +1,7 @@
 import React, { useLayoutEffect } from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  TextInput,
-  Pressable,
-} from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Feather } from "@expo/vector-icons";
 import Explore from "../components/Explore";
 import Tabs from "../components/Tabs";
@@ -14,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import BottomNavigator from "../components/BottomNavigator";
 import LatestNews from "../components/LatestNews";
 import RandomNews from "../components/RandomNews";
+import { StatusBar } from "expo-status-bar";
 
 const Homepage = () => {
   const navigation = useNavigation();
@@ -24,6 +21,7 @@ const Homepage = () => {
   }, []);
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar style="dark" backgroundColor="white" />
       <View style={styles.top}>
         <View style={styles.header}>
           <View style={{ width: "70%" }}>
@@ -33,19 +31,19 @@ const Homepage = () => {
               style={styles.searchInput}
             />
             <View style={styles.searchFloating}>
-              <Pressable>
+              <TouchableOpacity>
                 <View>
                   <Feather name="search" size={20} color="gray" />
                 </View>
-              </Pressable>
+              </TouchableOpacity>
             </View>
           </View>
 
-          <Pressable onPress={() => navigation.navigate("HotUpdates")}>
+          <TouchableOpacity onPress={() => navigation.navigate("HotUpdates")}>
             <View style={styles.searchButton}>
               <Feather color="white" name="bell" size={24} />
             </View>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
       {/*Explore*/}

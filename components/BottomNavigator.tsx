@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#fff",
     flexDirection: "row",
-    padding: 15,
-    paddingHorizontal: 40,
+    padding: 12,
+    paddingHorizontal: 28,
     borderRadius: 50,
     shadowColor: "#90a0ca",
     shadowOffset: {

@@ -5,7 +5,7 @@ import {
   Image,
   Text,
   Animated,
-  Pressable,
+  TouchableOpacity,
   ScrollView,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
@@ -68,7 +68,7 @@ export default function NewsDetails() {
           ],
         }}
       >
-        <Pressable
+        <TouchableOpacity
           style={{
             display: "flex",
             alignItems: "center",
@@ -97,7 +97,7 @@ export default function NewsDetails() {
           >
             <Ionicons name="chevron-back" size={24} color="green" />
           </BlurView>
-        </Pressable>
+        </TouchableOpacity>
         <Image
           style={styles.backdrop}
           source={{ uri: article.urlToImage }}

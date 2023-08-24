@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   View,
-  Pressable,
+  TouchableOpacity,
   Text,
   SafeAreaView,
   FlatList,
@@ -27,7 +27,7 @@ const Tabs = () => {
   const renderItem = ({ item, index }) => {
     const isActive = index === value;
     return (
-      <Pressable
+      <TouchableOpacity
         onPress={() => {
           setValue(index);
         }}
@@ -49,7 +49,7 @@ const Tabs = () => {
             {item.name}
           </Text>
         </View>
-      </Pressable>
+      </TouchableOpacity>
     );
   };
 

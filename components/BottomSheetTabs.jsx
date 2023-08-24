@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback,
   Text,
   FlatList,
-  Pressable,
+  TouchableOpacity,
 } from "react-native";
 import BottomSheet from "react-native-raw-bottom-sheet";
 import { Feather } from "@expo/vector-icons";
@@ -83,7 +83,7 @@ const BottomSheetTabs = () => {
           >
             <Text style={{ fontWeight: "500", fontSize: 30 }}>Filter</Text>
             <View>
-              <View style={styles.btnXS}>
+              <View style={styles.btnMD}>
                 <Feather
                   name="trash"
                   color="black"
@@ -108,39 +108,41 @@ const BottomSheetTabs = () => {
               gap: 6,
             }}
           >
-            <Pressable>
+            <TouchableOpacity>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Recommended</Text>
               </View>
-            </Pressable>
-            <Pressable>
+            </TouchableOpacity>
+            <TouchableOpacity>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Latest</Text>
               </View>
-            </Pressable>
-            <Pressable>
+            </TouchableOpacity>
+            <TouchableOpacity>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Most Viewed</Text>
               </View>
-            </Pressable>
-            <Pressable>
+            </TouchableOpacity>
+            <TouchableOpacity>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Channel</Text>
               </View>
-            </Pressable>
-            <Pressable>
+            </TouchableOpacity>
+            <TouchableOpacity>
               <View style={styles.btnXS}>
                 <Text style={styles.btnXSText}>Following</Text>
               </View>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={{ marginBottom: 30, margin: "auto" }}>
-          <Pressable>
+          <TouchableOpacity
+            style={{ paddingVertical: 8, paddingHorizontal: 12 }}
+          >
             <View style={styles.btnXL}>
               <Text style={styles.btnXLText}>Save</Text>
             </View>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </BottomSheet>
     </View>
@@ -156,7 +158,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 50,
     paddingVertical: 12,
-    width: 370,
+    //    width: 410,
     backgroundColor: "#ff3a44",
     margin: "auto",
   },
@@ -166,11 +168,23 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#fff",
   },
+
+  btnMD: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+
+    borderWidth: 2,
+    borderColor: "black",
+  },
   btnXS: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 8,
+    borderRadius: 50,
     paddingVertical: 6,
     paddingHorizontal: 14,
 

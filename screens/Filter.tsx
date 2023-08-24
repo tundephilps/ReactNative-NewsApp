@@ -1,16 +1,12 @@
 import React, { useLayoutEffect } from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  TextInput,
-  Pressable,
-} from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Feather } from "@expo/vector-icons";
 import Results from "../components/Results";
 import BottomSheetTabs from "../components/BottomSheetTabs";
 import { useNavigation } from "@react-navigation/native";
 import RandomNews from "../components/RandomNews";
+import { StatusBar } from "expo-status-bar";
 
 const Filter = () => {
   const navigation = useNavigation();
@@ -23,6 +19,7 @@ const Filter = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar style="dark" backgroundColor="white" />
       <View style={styles.top}>
         <View style={styles.header}>
           <View
@@ -34,11 +31,11 @@ const Filter = () => {
               style={styles.searchInput}
             />
             <View style={styles.searchFloating}>
-              <Pressable>
+              <TouchableOpacity>
                 <View>
                   <Feather name="search" size={20} color="gray" />
                 </View>
-              </Pressable>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -58,7 +55,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffff",
     flex: 1,
-    paddingTop: 24,
   },
   top: {
     paddingVertical: 8,

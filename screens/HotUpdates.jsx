@@ -3,15 +3,16 @@ import {
   StyleSheet,
   View,
   Text,
-  Pressable,
-  SafeAreaView,
+  TouchableOpacity,
   Image,
   FlatList,
 } from "react-native";
-
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { fetchTopHeadlines, selectTopHeadlinesData } from "../Redux/newSlice";
+
+import { StatusBar } from "expo-status-bar";
 
 const HotUpdates = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const HotUpdates = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <Pressable
+    <TouchableOpacity
       onPress={() => navigation.navigate("NewsDetails", { article: item })}
     >
       <View style={styles.card}>
@@ -52,17 +53,17 @@ const HotUpdates = () => {
           </Text>
         </View>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   );
 
   return (
     <SafeAreaView>
+      <StatusBar style="dark" backgroundColor="white" />
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <View style={styles.container}>
           <FlatList
             data={topHeadlinesData}
             keyExtractor={(item, index) => `${item.publishedAt}-${index}`}
-            //  keyExtractor={(item) => item.publishedAt}
             renderItem={renderItem}
             vertical
             showsVerticalScrollIndicator={false}
