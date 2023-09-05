@@ -57,20 +57,22 @@ const HotUpdates = () => {
   );
 
   return (
-    <SafeAreaView>
-      <StatusBar style="dark" backgroundColor="white" />
-      <View style={{ flex: 1, backgroundColor: "white" }}>
-        <View style={styles.container}>
-          <FlatList
-            data={topHeadlinesData}
-            keyExtractor={(item, index) => `${item.publishedAt}-${index}`}
-            renderItem={renderItem}
-            vertical
-            showsVerticalScrollIndicator={false}
-          />
+    <View style={{ flex: 1, display: "flex", backgroundColor: "white" }}>
+      <SafeAreaView>
+        <StatusBar style="dark" backgroundColor="white" />
+        <View>
+          <View style={styles.container}>
+            <FlatList
+              data={topHeadlinesData}
+              keyExtractor={(item, index) => `${item.publishedAt}-${index}`}
+              renderItem={renderItem}
+              vertical
+              showsVerticalScrollIndicator={false}
+            />
+          </View>
         </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 };
 
